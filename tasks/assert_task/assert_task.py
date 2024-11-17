@@ -1,4 +1,3 @@
-def divide(a: int, b: int) -> float:
-    """
-    Return the result of the division if b != 0, otherwise raise an AssertionError
-    """
+def divide(a: int, b: int) -> float :
+    assert b!=0, "Division by zero"
+    return a/b
