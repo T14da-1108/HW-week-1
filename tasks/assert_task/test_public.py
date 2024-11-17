@@ -1,5 +1,5 @@
 import pytest
-import testlib
+import test
 import math
 
 from .assert_task import divide
@@ -25,7 +25,7 @@ def test_division_simple() -> None:
 
 
 def test_division_negative() -> None:
-    result = divide(-9, 27)
+    result = divide(a=-9, b=27)
     assert isinstance(result, float)
     assert math.isclose(result, -0.333333333)
 
