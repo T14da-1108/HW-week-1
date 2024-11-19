@@ -2,8 +2,9 @@ import pytest
 import math
 from .assert_task import divide
 
+from typing import Callable
 
-def is_function_docstring_exists(func:  callable) -> bool :
+def is_function_docstring_exists(func: Callable) -> bool :
     """
     check if a function has a docstring.
     param func: Function to check
