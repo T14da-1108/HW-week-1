@@ -32,4 +32,4 @@ def test_division_negative() -> None:
 
 def test_divide_by_zero_assert() -> None:
     with pytest.raises(ZeroDivisionError, match="division by zero"):
-        divide(5, 0)
+        divide_numbers(5, 0)
