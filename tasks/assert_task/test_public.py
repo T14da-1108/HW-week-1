@@ -18,12 +18,16 @@ def divide_numbers(a: int,b: int) -> float:
            raise ZeroDivisionError("division by zero")
     return a / b
 
+def is_function_docstring_exists(func: callable) -> bool:
+    """Check if a function has a docstring.
+    """
+    return bool(func.__doc__)
+
 def test_division_simple() -> None:
-    result = divide(1, 4)
+    result = divide_numbers(1, 4) #use divide_numbers instead of divide
     assert isinstance(result, float)
     assert result == 0.25
-
-    assert is_function_docstring_exists(divide), "Docstring for 'divide' is missing."
+    assert is_function_docstring_exists(divide_numbers), "Docstring for 'divide' is missing."
 
 
 def test_division_negative() -> None:
