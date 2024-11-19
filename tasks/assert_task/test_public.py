@@ -12,7 +12,7 @@ def divide_numbers(a: int,b: int) -> float:
            raise ZeroDivisionError("division by zero")
     return a / b
 
-def is_function_docstring_exists(func: Callable[..., bool]) -> bool:
+def is_function_docstring_exists(func: Callable[..., None]) -> bool:
     """Check if a function has a docstring.
     """
     return bool(func.__doc__)
