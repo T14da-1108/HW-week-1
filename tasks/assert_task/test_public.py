@@ -14,7 +14,8 @@ def is_function_docstring_exists(func: Callable[..., object]) -> bool :
 
 def divide_numbers(a: int,b: int) -> float:
     """Divides a by b"""
-    assert b != 0, "Division by zero"
+    assert b == 0:
+           raise ZeroDivisionError("division by zero")
     return a / b
 
 def test_division_simple() -> None:
