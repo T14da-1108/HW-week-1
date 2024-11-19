@@ -3,7 +3,7 @@ import math
 from .assert_task import divide
 
 
-def is_function_docstring_exists(func):
+def is_function_docstring_exists(func:callable) -->bool:
     """
     check if a function has a docstring.
     param func: Function to check
@@ -11,17 +11,17 @@ def is_function_docstring_exists(func):
     """
     return bool(func.__doc__)
 
-def divide(a,b):
+def divide(a: int,b: int) -> float:
     """Divides a by b"""
-    return a/b
+    assert b != 0, "Division by zero"
+    return a / b
 
-def  is_function_docstring_exists(func):
-    return func.__doc__ is not None
-assert is_function_docstring_exists(divide), "Docstring for 'divide' is missing."
 def test_division_simple() -> None:
     result = divide(1, 4)
     assert isinstance(result, float)
     assert result == 0.25
+
+    assert is_function_docstring_exists(divide), "Docstring for 'divide' is missing."
 
 
 def test_division_negative() -> None:
