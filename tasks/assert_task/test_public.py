@@ -3,13 +3,13 @@ import math
 from .assert_task import divide
 
 
-def is_function_docstring_exists(func: callable) --> bool:
+def is_function_docstring_exists(func:  callable) --> bool:
     """
     check if a function has a docstring.
     param func: Function to check
     return: True if the function has a docstring, False otherwise
     """
-    return bool(func.__doc__)
+    return func.__doc__ is not None
 
 def divide(a: int,b: int) -> float:
     """Divides a by b"""
