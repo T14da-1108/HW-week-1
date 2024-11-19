@@ -4,13 +4,7 @@ from .assert_task import divide
 
 from typing import Callable
 
-def is_function_docstring_exists(func: Callable[..., object]) -> bool :
-    """
-    check if a function has a docstring.
-    param func: Function to check
-    return: True if the function has a docstring, False otherwise
-    """
-    return func.__doc__ is not None
+
 
 def divide_numbers(a: int,b: int) -> float:
     """Divides a by b"""
@@ -18,7 +12,7 @@ def divide_numbers(a: int,b: int) -> float:
            raise ZeroDivisionError("division by zero")
     return a / b
 
-def is_function_docstring_exists(func: callable) -> bool:
+def is_function_docstring_exists(func: Callable) -> bool:
     """Check if a function has a docstring.
     """
     return bool(func.__doc__)
