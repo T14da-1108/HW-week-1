@@ -50,7 +50,7 @@ def get_module_imports(path: str | Path) -> set[str]:
         return imports
 
 
-def is_module_imported(module_name: str, path: str | Path) -> bool:
+def is_module_imported(module_name: str, path: str ) -> bool:
     return module_name in get_module_imports(path)
 
 

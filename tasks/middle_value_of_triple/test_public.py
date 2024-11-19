@@ -1,6 +1,5 @@
 import dataclasses
 
-from mypy.errorcodes import IMPORT
 import pytest
 
 from tasks.middle_value_of_triple.middle_value_of_triple import get_middle_value
